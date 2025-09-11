@@ -7,8 +7,8 @@ const { chromium } = require('playwright');
 const path = require('path');
 const fs = require('fs');
 
-const EMAIL = 'janaki.doddannavara@anko.com';  // replace with your user name
-const PASSWORD = 'Qakas@22july';        // replace with your password
+const EMAIL = 'username@anko.com';  // replace with your user name
+const PASSWORD = 'Password';        // replace with your password
 
 (async () => {
   const context = await chromium.launchPersistentContext('./user-data', {
