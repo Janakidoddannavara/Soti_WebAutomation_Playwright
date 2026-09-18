@@ -1,0 +1,7 @@
+node_modules/
+user-data/
+user-data-sumo/
+output/
+downloads/
+.env
+*.log

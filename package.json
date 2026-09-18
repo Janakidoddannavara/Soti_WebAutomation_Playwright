@@ -1,0 +1,13 @@
+{
+  "name": "soti-webautomation-playwright",
+  "version": "1.0.0",
+  "description": "Playwright automation for receipt lookup and Sumo Logic log checks",
+  "main": "Receipt_Lookup_Sumo_Logs.js",
+  "scripts": {
+    "receipt-logs": "node Receipt_Lookup_Sumo_Logs.js",
+    "stocktake": "node Stocktake_Logs_Download.js"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
