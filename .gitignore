@@ -1,6 +1,8 @@
 node_modules/
 user-data/
 user-data-sumo/
+user-data-receipt-lookup/
+user-data-receipt-lookup-*/
 output/
 downloads/
 .env

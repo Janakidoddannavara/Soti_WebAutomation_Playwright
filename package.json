@@ -1,11 +1,29 @@
 {
-  "name": "soti-webautomation-playwright",
+  "name": "receipt-lookup-playwright",
   "version": "1.0.0",
-  "description": "Playwright automation for receipt lookup and Sumo Logic log checks",
-  "main": "Receipt_Lookup_Sumo_Logs.js",
+  "description": "Playwright framework: Receipt Lookup UI scenarios + Sumo Logic cross-verify",
+  "main": "src/index.js",
   "scripts": {
-    "receipt-logs": "node Receipt_Lookup_Sumo_Logs.js",
-    "stocktake": "node Stocktake_Logs_Download.js"
+    "receipt-logs": "node runners/receiptLookup.js",
+    "start": "node runners/receiptLookup.js",
+    "scenarios": "node runners/receiptLookup.js --list",
+    "scenarios:all": "node runners/receiptLookup.js --all",
+    "scenarios:positive": "node runners/receiptLookup.js --positive",
+    "scenarios:negative": "node runners/receiptLookup.js --negative",
+    "scenarios:identify": "node runners/receiptLookup.js --scenario=byDetails-card && node runners/receiptLookup.js --scenario=byDetails-flybuys && node runners/receiptLookup.js --scenario=byDetails-onepass",
+    "scenario:card": "node runners/receiptLookup.js --scenario=byDetails-card",
+    "scenario:flybuys": "node runners/receiptLookup.js --scenario=byDetails-flybuys",
+    "scenario:onepass": "node runners/receiptLookup.js --scenario=byDetails-onepass",
+    "scenario:digital": "node runners/receiptLookup.js --scenario=byDigitalReceiptNumber",
+    "scenario:search-only": "node runners/receiptLookup.js --scenario=search-only",
+    "scenario:auth-token": "node runners/receiptLookup.js --scenario=auth-token-only",
+    "scenario:inject": "node runners/receiptLookup.js --scenario=browser-inject",
+    "scenario:os-chrome": "node runners/receiptLookup.js --scenario=browser-os-chrome",
+    "scenario:sumo-only": "node runners/receiptLookup.js --scenario=sumo-only",
+    "scenario:neg-no-stores": "node runners/receiptLookup.js --scenario=negative-no-stores-found",
+    "scenario:neg-no-receipts": "node runners/receiptLookup.js --scenario=negative-no-receipts-digital",
+    "scenario:neg-date-range": "node runners/receiptLookup.js --scenario=negative-date-range-limit",
+    "scenario:neg-amount-range": "node runners/receiptLookup.js --scenario=negative-amount-range-limit"
   },
   "dependencies": {
     "playwright": "^1.49.0"
