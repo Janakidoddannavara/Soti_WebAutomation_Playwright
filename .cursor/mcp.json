@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "/usr/local/bin/npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--browser=chrome"
+      ]
+    }
+  }
+}
